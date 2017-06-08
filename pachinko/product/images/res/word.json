@@ -1,0 +1,222 @@
+{
+    "frames": {
+        "word_num0.png": {
+            "frame": {
+                "x": 0,
+                "y": 0,
+                "w": 15,
+                "h": 27,
+                "idx": 0
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 15,
+                "h": 27
+            },
+            "sourceSize": {
+                "w": 15,
+                "h": 27
+            },
+            "rotated": false,
+            "trimed": true
+        },
+        "word_num9.png": {
+            "frame": {
+                "x": 0,
+                "y": 29,
+                "w": 15,
+                "h": 27,
+                "idx": 0
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 15,
+                "h": 27
+            },
+            "sourceSize": {
+                "w": 15,
+                "h": 27
+            },
+            "rotated": false,
+            "trimed": true
+        },
+        "word_num2.png": {
+            "frame": {
+                "x": 0,
+                "y": 58,
+                "w": 15,
+                "h": 27,
+                "idx": 0
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 15,
+                "h": 27
+            },
+            "sourceSize": {
+                "w": 15,
+                "h": 27
+            },
+            "rotated": false,
+            "trimed": true
+        },
+        "word_num3.png": {
+            "frame": {
+                "x": 17,
+                "y": 0,
+                "w": 14,
+                "h": 27,
+                "idx": 0
+            },
+            "spriteSourceSize": {
+                "x": 1,
+                "y": 0,
+                "w": 14,
+                "h": 27
+            },
+            "sourceSize": {
+                "w": 15,
+                "h": 27
+            },
+            "rotated": false,
+            "trimed": true
+        },
+        "word_num4.png": {
+            "frame": {
+                "x": 17,
+                "y": 29,
+                "w": 15,
+                "h": 26,
+                "idx": 0
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 15,
+                "h": 26
+            },
+            "sourceSize": {
+                "w": 15,
+                "h": 27
+            },
+            "rotated": false,
+            "trimed": true
+        },
+        "word_num5.png": {
+            "frame": {
+                "x": 33,
+                "y": 0,
+                "w": 14,
+                "h": 27,
+                "idx": 0
+            },
+            "spriteSourceSize": {
+                "x": 1,
+                "y": 0,
+                "w": 14,
+                "h": 27
+            },
+            "sourceSize": {
+                "w": 15,
+                "h": 27
+            },
+            "rotated": false,
+            "trimed": true
+        },
+        "word_num6.png": {
+            "frame": {
+                "x": 34,
+                "y": 29,
+                "w": 15,
+                "h": 27,
+                "idx": 0
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 15,
+                "h": 27
+            },
+            "sourceSize": {
+                "w": 15,
+                "h": 27
+            },
+            "rotated": false,
+            "trimed": true
+        },
+        "word_num7.png": {
+            "frame": {
+                "x": 17,
+                "y": 57,
+                "w": 14,
+                "h": 26,
+                "idx": 0
+            },
+            "spriteSourceSize": {
+                "x": 1,
+                "y": 0,
+                "w": 14,
+                "h": 26
+            },
+            "sourceSize": {
+                "w": 15,
+                "h": 27
+            },
+            "rotated": false,
+            "trimed": true
+        },
+        "word_num8.png": {
+            "frame": {
+                "x": 49,
+                "y": 0,
+                "w": 15,
+                "h": 27,
+                "idx": 0
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 15,
+                "h": 27
+            },
+            "sourceSize": {
+                "w": 15,
+                "h": 27
+            },
+            "rotated": false,
+            "trimed": true
+        },
+        "word_num1.png": {
+            "frame": {
+                "x": 33,
+                "y": 58,
+                "w": 10,
+                "h": 26,
+                "idx": 0
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 10,
+                "h": 26
+            },
+            "sourceSize": {
+                "w": 11,
+                "h": 27
+            },
+            "rotated": false,
+            "trimed": true
+        }
+    },
+    "meta": {
+        "app": "http:\/\/www.layabox.com",
+        "version": "0.1.0 alpha",
+        "format": "json",
+        "scale": 1,
+        "image": "word.png",
+        "prefix": ""
+    }
+}

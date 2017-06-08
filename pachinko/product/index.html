@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'/>
+	<title>www.layabox.com</title>
+	<meta name='viewport' content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no'/>
+	<meta name='apple-mobile-web-app-capable' content='yes' />
+	<meta name='full-screen' content='true' />
+	<meta name='screen-orientation' content='portrait' />
+	<meta name='x5-fullscreen' content='true' />
+	<meta name='360-fullscreen' content='true' />
+	<meta http-equiv='expires' content='0' />
+	<script src="libs/polyfill/polyfill.min.js"></script>
+  	<script src="libs/eventEmitter/EventEmitter.min.js"></script>
+  	<style>
+  		html, body{background-color:#000}	
+  	</style>
+  	<script>
+	'use strict';
+	window.GM || (window.GM = {});
+
+	GM.debugFE = false; // 默认为 false, 不出现log
+	GM.userLogged = false; // 判断用户是否已登录
+	// 人机游戏的 socketIoUrl 和 token
+	GM.socketIoUrl_RJ = "https://nodejs.games.1768.com:9589/";
+	GM.token_RJ = "";
+	GM.gameType = "1"; // 判断是否 需要添加socket处理游戏
+	GM.staticVersion = '201702160500'; // 版本号
+	GM.cdnPath = "/files/"; // CDN路径
+	GM.cdnPathUpload = "/files/"; // CDN路径
+	GM.isShowSetButton = ""; // 是否显示设置按钮
+
+	GM.isNewGame = ""; // 新老游戏标识1新游戏；2老游戏；（新游戏默认反奖类型欢乐值）
+
+	GM.showExchange = ""; // 是否显示去兑换按钮
+
+	// 是否需要socket 支持
+	GM.needAddSocket = GM.userLogged && GM.gameType === '1';
+
+	var needHideNotice = "0"; // 1 需要隐藏公告按钮
+	GM.needHideNotice = (needHideNotice === "1"); // true 代表需要隐藏
+
+	// 健康金用户判断
+	GM.is_jiankangjin_user =  false; // false 不是健康金用户 | true 是健康金用户
+	GM.user_id = ""; //全局保存user_id
+	// // 暂时不用
+	// if(GM.horizontal === undefined){
+	// 	GM.horizontal = 0; // horizontal为0, 默认竖屏;
+	// }
+
+	/*
+	 * 版权信息
+	 * 著作权人 copyrightOwner
+	 * 出版服务单位 publishCompany
+	 * 出版物号 publicationNo
+	 * 批准文案 publishCopyright
+	*/
+	GM.gamePublishInfo = '{"publishInfo":{"copyrightOwner":"\u4e0a\u6d77\u53cb\u73a9\u7f51\u7edc\u79d1\u6280\u6709\u9650\u516c\u53f8","publishCompany":"\u534e\u4e1c\u5e08\u8303\u5927\u5b66\u7535\u5b50\u97f3\u50cf\u51fa\u7248\u793e\u6709\u9650\u516c\u53f8","publicationNo":"ISBN 978-7-7979-2948-6","publishCopyright":""}}';
+  	</script>
+</head>
+<body>
+    <!-- Protobuf -->
+    <!--<script src="libs/laya/bytebuffer.js"></script>
+    <script src="libs/laya/protobuf.js"></script>
+	-->
+   
+	<!--核心包，封装了显示对象渲染，事件，时间管理，时间轴动画，缓动，消息交互,socket，本地存储，鼠标触摸，声音，加载，颜色滤镜，位图字体等-->
+	<script src="libs/laya/laya.core.js"></script>
+	<!--封装了webgl渲染管线，如果使用webgl渲染，可以在初始化时调用Laya.init(1000,800,laya.webgl.WebGL);-->
+    <script src="libs/laya/laya.webgl.js"></script>
+	<!--是动画模块，包含了swf动画，骨骼动画等-->
+    <script src="libs/laya/laya.ani.js"></script>
+	<!--包含更多webgl滤镜，比如外发光，阴影，模糊以及更多-->
+    <script src="libs/laya/laya.filter.js"></script>
+	<!--封装了html动态排版功能-->
+    <script src="libs/laya/laya.html.js"></script>
+	<!--粒子类库-->
+    <script src="libs/laya/laya.particle.js"></script>
+	<!--提供tileMap解析支持-->
+    <script src="libs/laya/laya.tiledmap.js"></script>
+	<!--提供了制作UI的各种组件实现-->
+    <script src="libs/laya/laya.ui.js"></script>
+	
+	<!-- 物理引擎matter.js -->
+	<smcript src="libs/laya/decomp.min.js"></smcript>
+    <script src="libs/laya/matter.js"></script>
+    <script src="libs/laya/LayaRender.js"></script>
+	<!--自定义的js(src文件夹下)文件自动添加到下面jsfile模块标签里面里，js的顺序可以手动修改，修改后保留修改的顺序，新增加的js会默认依次追加到标签里-->
+	<!--删除标签，ide不会自动添加js文件，请谨慎操作-->
+	<!--jsfile--startTag-->
+	<script src="js/popModules.js"></script>
+	<script src="js/config.js"></script>
+	<script src="js/loading.js"></script>
+	<script src="js/hall.js"></script>
+	<script src="js/room.js"></script>
+  	<script src="js/init.js"></script>
+	<!--jsfile--endTag-->
+</body>
+</html>
